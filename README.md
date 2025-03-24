@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hospital Management System
 
 A web-based Hospital Management System built with Node.js, Express, MySQL, and vanilla JavaScript.
@@ -116,3 +117,6 @@ hospital-management-system/
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+# hospital-management-system
+>>>>>>> 6cddbfc489816113e0b0a0cc76b662337b1fcb5a
