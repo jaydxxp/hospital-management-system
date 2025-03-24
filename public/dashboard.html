@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>HMS</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#" id="dashboard-link">Dashboard Overview</a></li>
+                <li><a href="#" id="registration-link">Patient Registration</a></li>
+                <li><a href="#" id="management-link">Patient Management</a></li>
+                <li><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div id="dashboard-overview" class="content-section">
+                <h2>Dashboard Overview</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Patients</h3>
+                        <p id="total-patients">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Today's Registrations</h3>
+                        <p id="today-registrations">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="patient-registration" class="content-section" style="display: none;">
+                <h2>Patient Registration</h2>
+                <form id="registration-form" class="patient-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Register Patient</button>
+                </form>
+            </div>
+
+            <div id="patient-management" class="content-section" style="display: none;">
+                <h2>Patient Management</h2>
+                <table class="patient-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patient-list">
+                        <!-- Patient data will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Patient Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Patient</h2>
+            <form id="edit-form" class="patient-form">
+                <input type="hidden" id="edit-patient-id">
+                <div class="form-group">
+                    <label for="edit-name">Name</label>
+                    <input type="text" id="edit-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-age">Age</label>
+                    <input type="number" id="edit-age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-dob">Date of Birth</label>
+                    <input type="date" id="edit-dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-city">City</label>
+                    <input type="text" id="edit-city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="edit-male" name="gender" value="male" required>
+                        <label for="edit-male">Male</label>
+                        <input type="radio" id="edit-female" name="gender" value="female" required>
+                        <label for="edit-female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="edit-mobile">Mobile Number</label>
+                    <input type="tel" id="edit-mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Email Address</label>
+                    <input type="email" id="edit-email" name="email" required>
+                </div>
+                <button type="submit" class="btn-primary">Update Patient</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 
