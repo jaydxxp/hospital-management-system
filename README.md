@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Hospital Management System
 
 A web-based Hospital Management System built with Node.js, Express, MySQL, and vanilla JavaScript.
